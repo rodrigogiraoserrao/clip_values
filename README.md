@@ -10,11 +10,12 @@ or if you are writing a cool game, you want your character to stay inside the sc
 
 Now, if you have to do all this clipping, which alternative to clipping do you prefer?
 
-### Using `clip`
+### Using `clip_values.clip`
 
 `clip` offers human-readable syntax to your clipping operations:
 
 ```py
+from clip_values import clip
 colour_channel = clip(colour_channel).between_(0).and_(255)
 discount = clip(discount).between_(0).and_(1)
 player_x_pos = clip(player_x_pos).between_(0).and_(SCREEN_WIDTH)
